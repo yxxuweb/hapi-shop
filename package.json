@@ -1,0 +1,43 @@
+{
+  "name": "hapi-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV='development' nodemon app.js",
+    "start": "cross-env NODE_ENV='production' nodemon app.js",
+    "sequelize:init": "sequelize init --force",
+    "sequelize:db:create": "sequelize db:create --charset=utf8mb4",
+    "sequelize:table:create": "sequelize migration:create --name create-goods-table",
+    "sequelize:db:migrate": "sequelize db:migrate",
+    "sequelize:db:migrate:undo": "sequelize db:migrate:undo",
+    "sequelize:db:migrate:undo:all": "sequelize db:migrate:undo:all",
+    "sequelize:seed:create": "sequelize seed:create --name init-goods",
+    "sequelize:db:seed:all": "sequelize db:seed:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "env2": "^2.2.2",
+    "hapi": "^16.7.0",
+    "hapi-auth-jwt2": "^7.4.1",
+    "hapi-pagination": "^1.22.0",
+    "hapi-swagger": "^7.10.0",
+    "inert": "^4.2.1",
+    "joi": "^13.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^1.6.5",
+    "package": "^1.0.1",
+    "sequelize": "^5.8.6",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "sequelize-cli": "^5.4.0"
+  }
+}
